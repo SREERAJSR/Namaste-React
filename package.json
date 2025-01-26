@@ -1,0 +1,22 @@
+{
+  "name": "namste-react",
+  "version": "1.0.0",
+  "description": "This is namaste react app by sreeraj sr",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SREERAJSR/Namaste-React.git"
+  },
+  "author": "Sreeraj_SR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SREERAJSR/Namaste-React/issues"
+  },
+  "homepage": "https://github.com/SREERAJSR/Namaste-React#readme",
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  }
+}
