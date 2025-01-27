@@ -1,24 +1,38 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// React element
-const heading = React.createElement(
+// create react element using React core function => JsObject
+const firstCore = React.createElement(
   "h1",
-  { id: "heading" },
-  "Namaste React 🚀"
+  { id: "first" },
+  "first react element with core"
 );
-// jsx => babel transplied it into react element
-const nav = <h1>Hello from jsx, react element</h1>
+// created react element using jsx => babbel transpiles the jsx to React element => jsObject => render(HtmlElement)
+const jsxH1 = (
+  <h1 id="second" className="secondJsx">
+    Second react element with jsx
+  </h1>
+);
 
-// React component
-const TitleComponent =()=>(
-  <h1>Hello from title comp</h1>
-)
-const HeadingComponent = () => {
-  return (<div id='heading'>
-    <TitleComponent />
-  <h1>Namaste React from Heading comp</h1>
-  </div>);
+// create react functional component using normal js function
+const proposal = "I love you n*m*s*a";
+const NavComponent = function () {
+  return (
+    <div id="container">
+      <h1> React functional component with js normal function </h1>
+      <h1>{proposal}</h1>
+    </div>
+  );
 };
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<HeadingComponent/>);
+// create react functional component using  arrow function
+const HeadingComponent = () => (
+  <div id="heading">
+    <h3>Sreedev is software developer</h3>
+    <NavComponent></NavComponent>     
+    <NavComponent />
+    {NavComponent()}
+  </div>
+);
+
+const root = document.getElementById("root");
+ReactDOM.createRoot(root).render(<HeadingComponent />);
