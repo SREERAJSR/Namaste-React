@@ -2951,86 +2951,202 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
-// create react element using React core function => JsObject
-const firstCore = /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {
-    id: "first"
-}, "first react element with core");
-// created react element using jsx => babbel transpiles the jsx to React element => jsObject => render(HtmlElement)
-const jsxH1 = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-    id: "second",
-    className: "secondJsx",
-    children: "Second react element with jsx"
-}, void 0, false, {
-    fileName: "app.js",
-    lineNumber: 12,
-    columnNumber: 3
-}, undefined);
-// create react functional component using normal js function
-const proposal = "I love you n*m*s*a";
-const NavComponent = function() {
+const HeaderComponent = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        id: "container",
+        className: "header",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: " React functional component with js normal function "
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "logo-container",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    alt: "logo",
+                    id: "logo",
+                    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ3Za2XIox6pT0Jfb1mTa0OFyi5_tupvneKQ&s"
+                }, void 0, false, {
+                    fileName: "app.js",
+                    lineNumber: 8,
+                    columnNumber: 9
+                }, undefined)
             }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 22,
+                lineNumber: 7,
                 columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: proposal
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "nav-container",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                    className: "nav-links",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Home"
+                        }, void 0, false, {
+                            fileName: "app.js",
+                            lineNumber: 16,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "About"
+                        }, void 0, false, {
+                            fileName: "app.js",
+                            lineNumber: 17,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Cart"
+                        }, void 0, false, {
+                            fileName: "app.js",
+                            lineNumber: 18,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "app.js",
+                    lineNumber: 15,
+                    columnNumber: 9
+                }, undefined)
             }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 23,
+                lineNumber: 14,
                 columnNumber: 7
-            }, this)
+            }, undefined)
         ]
     }, void 0, true, {
         fileName: "app.js",
-        lineNumber: 21,
+        lineNumber: 6,
         columnNumber: 5
-    }, this);
+    }, undefined);
 };
-_c = NavComponent;
-// create react functional component using  arrow function
-const HeadingComponent = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        id: "heading",
+_c = HeaderComponent;
+const RestaurantCardComponent = (props)=>{
+    console.log(props);
+    const { res_name, cusine, rating } = props;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "res-card",
+        style: {
+            backgroundColor: "#D3D3D3"
+        },
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: "Sreedev is software developer"
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "res-logo",
+                alt: "fud-image",
+                src: "https://b.zmtcdn.com/data/pictures/chains/5/19026635/eeceb6b37200a6f510d9b1406f5ad220_o2_featured_v2.jpg"
             }, void 0, false, {
                 fileName: "app.js",
                 lineNumber: 30,
-                columnNumber: 5
+                columnNumber: 9
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(NavComponent, {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: res_name
+            }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 31,
-                columnNumber: 5
+                lineNumber: 35,
+                columnNumber: 9
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(NavComponent, {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: cusine
+            }, void 0, false, {
                 fileName: "app.js",
-                lineNumber: 32,
-                columnNumber: 5
+                lineNumber: 36,
+                columnNumber: 9
             }, undefined),
-            NavComponent()
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: [
+                    rating,
+                    " stars"
+                ]
+            }, void 0, true, {
+                fileName: "app.js",
+                lineNumber: 37,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: "38 minutes"
+            }, void 0, false, {
+                fileName: "app.js",
+                lineNumber: 38,
+                columnNumber: 9
+            }, undefined)
         ]
     }, void 0, true, {
         fileName: "app.js",
         lineNumber: 29,
+        columnNumber: 5
+    }, undefined);
+};
+_c1 = RestaurantCardComponent;
+const BodyComponent = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "body",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "search",
+                children: "Search"
+            }, void 0, false, {
+                fileName: "app.js",
+                lineNumber: 46,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "res-container",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCardComponent, {
+                        res_name: "Meghana food",
+                        cusine: "Biriyani,NorthIndian, Asian",
+                        rating: "4.4"
+                    }, void 0, false, {
+                        fileName: "app.js",
+                        lineNumber: 48,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCardComponent, {}, void 0, false, {
+                        fileName: "app.js",
+                        lineNumber: 49,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "app.js",
+                lineNumber: 47,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "app.js",
+        lineNumber: 45,
         columnNumber: 3
     }, undefined);
-_c1 = HeadingComponent;
+_c2 = BodyComponent;
+const AppComponent = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "app",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeaderComponent, {}, void 0, false, {
+                fileName: "app.js",
+                lineNumber: 57,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(BodyComponent, {}, void 0, false, {
+                fileName: "app.js",
+                lineNumber: 58,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "app.js",
+        lineNumber: 56,
+        columnNumber: 5
+    }, undefined);
+};
+_c3 = AppComponent;
 const root = document.getElementById("root");
-(0, _clientDefault.default).createRoot(root).render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeadingComponent, {}, void 0, false, {
+(0, _clientDefault.default).createRoot(root).render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppComponent, {}, void 0, false, {
     fileName: "app.js",
-    lineNumber: 38,
+    lineNumber: 64,
     columnNumber: 34
 }, undefined));
-var _c, _c1;
-$RefreshReg$(_c, "NavComponent");
-$RefreshReg$(_c1, "HeadingComponent");
+var _c, _c1, _c2, _c3;
+$RefreshReg$(_c, "HeaderComponent");
+$RefreshReg$(_c1, "RestaurantCardComponent");
+$RefreshReg$(_c2, "BodyComponent");
+$RefreshReg$(_c3, "AppComponent");
 
   $parcel$ReactRefreshHelpers$6024.postlude(module);
 } finally {

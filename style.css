@@ -1,7 +1,53 @@
-#heading{
-    color:blue
+
+.logo-container{
+    width: 100px;
+}
+#logo{
+    width: 100%;
+    height: 100%;
+} 
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    background-color:steelblue;
 }
 
-h1,h2{
-    color:blue
+.nav-links{
+    display: flex;
+    list-style: none;
+}
+.nav-links > li {
+    padding: 10px 20px;
+    font-size:x-large;
+}
+
+.nav-container{
+    margin-right: 100px;
+
+}
+.res-card{
+    width: 250px;
+    margin: 10px;
+
+}
+
+.res-card:hover{
+    cursor:pointer;
+    border:1px solid black;
+    border-radius: 10px;
+}
+
+.res-logo{
+    width: 100%;
+}
+
+.body{
+    margin-top: 10px;
+}
+
+.res-container{
+    display: flex;
+    flex-wrap: wrap;
 }

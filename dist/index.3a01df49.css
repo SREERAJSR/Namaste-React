@@ -1,4 +1,54 @@
-#heading, h1, h2 {
-  color: #00f;
+.logo-container {
+  width: 100px;
+}
+
+#logo {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  background-color: #4682b4;
+  border: 1px solid #000;
+  justify-content: space-between;
+  display: flex;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links > li {
+  padding: 10px 20px;
+  font-size: x-large;
+}
+
+.nav-container {
+  margin-right: 100px;
+}
+
+.res-card {
+  width: 250px;
+  margin: 10px;
+}
+
+.res-card:hover {
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+.res-logo {
+  width: 100%;
+}
+
+.body {
+  margin-top: 10px;
+}
+
+.res-container {
+  flex-wrap: wrap;
+  display: flex;
 }
 /*# sourceMappingURL=index.3a01df49.css.map */
