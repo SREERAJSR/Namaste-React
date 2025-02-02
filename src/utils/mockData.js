@@ -1,26 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-const HeaderComponent = () => {
-  return (
-    <div className="header">
-      <div className="logo-container">
-        <img
-          alt="logo"
-          id="logo"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ3Za2XIox6pT0Jfb1mTa0OFyi5_tupvneKQ&s"
-        />
-      </div>
-      <div className="nav-container">
-        <ul className="nav-links">
-          <li>Home</li>
-          <li>About</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
 const resData = [
                   {
                     "info": {
@@ -34,7 +11,7 @@ const resData = [
                         "American",
                         "Burgers"
                       ],
-                      "avgRating": 4.4,
+                      "avgRating": 2,
                       "parentId": "515586",
                       "avgRatingString": "4.4",
                       "totalRatingsString": "210",
@@ -704,45 +681,6 @@ const resData = [
                     "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
                   }
 ]
-const RestaurantCardComponent = (props) => {
-  console.log(props?.resData?.info)
-const {name,cuisines,avgRating,sla,cloudinaryImageId}= props?.resData?.info
-const {deliveryTime} = sla
-  return (
-    <div className="res-card" style={{ backgroundColor: "#D3D3D3" }}>
-        <img
-          className="res-logo"
-          alt="fud-image"
-          src={'https://media-assets.swiggy.com/swiggy/image/upload/'+cloudinaryImageId}
-        />
-        <h3>{name}</h3>
-        <h4>{cuisines.join(',')}</h4>
-        <h4>rating {avgRating}</h4>
-        <h4>{deliveryTime} minutes</h4>
 
-    </div>
-  );
-};
 
-const BodyComponent = () => (
-  <div className="body">
-    <div className="search">Search</div>
-    <div className="res-container">
-      {resData.map((res)=> (
-        <RestaurantCardComponent resData ={res} />
-      ) )}
-    </div>
-  </div>
-);
-
-const AppComponent = () => {
-  return (
-    <div className="app">
-      <HeaderComponent />
-      <BodyComponent />
-    </div>
-  );
-};
-
-const root = document.getElementById("root");
-ReactDOM.createRoot(root).render(<AppComponent />);
+export default resData;

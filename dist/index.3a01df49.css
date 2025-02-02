@@ -52,4 +52,8 @@
   flex-wrap: wrap;
   display: flex;
 }
+
+.filter-btn {
+  cursor: pointer;
+}
 /*# sourceMappingURL=index.3a01df49.css.map */
