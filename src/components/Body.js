@@ -15,6 +15,7 @@ const Body = () => {
   const data = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=10.51600&lng=76.21570&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING')
   const json = await data.json()
 const actualData =json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+console.log(actualData);
 setresData(actualData)
 setFilteredResData(actualData)
  }
@@ -42,7 +43,7 @@ return resData.length===0?<Shimmer/>:(
       </div>
       <div className="res-container">
         {filteredResData.map((res) => (
-          <RestaurantCard id={res.info.id} resData={res} />
+          <RestaurantCard key={res.info.id} resData={res} />
         ))}
       </div>
     </div>
